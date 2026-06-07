@@ -833,8 +833,54 @@
 
 
 <!-- ASSISTENTE ANDRÉ -->
+<style>
+  .andre-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .andre-photo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .andre-photo-box {
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--accent-border);
+    background: var(--dark2);
+  }
+  .andre-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .andre-caption {
+    text-align: center;
+  }
+  .andre-online {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+  .andre-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #4A7C59;
+    animation: blink 2s ease-in-out infinite;
+  }
+</style>
 <section id="assistente" style="background: var(--dark); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="fade-in">
+  <div class="andre-inner fade-in">
     <div>
       <div class="section-label">Assistente do Site</div>
       <h2 class="section-title">Converse com <em>André Silva</em></h2>
@@ -845,24 +891,24 @@
       <p class="section-body">
         André personifica o resultado do trabalho da Token SLP: uma persona sintética com identidade cuidadosamente constituída, especialização definida e comportamento previsível e coerente. Ele demonstra, na prática, a capacidade do projeto de criar personas sintéticas complexas e eficazes.
       </p>
-      <br>
-      <a href="https://assist1.tokenslp.com.br" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;margin-top:0.5rem;">Conversar com André →</a>
     </div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:1.5rem;">
-      <div style="width:160px;height:160px;border-radius:8px;overflow:hidden;border:1px solid var(--accent-border);background:var(--dark2);display:flex;align-items:center;justify-content:center;">
+    <div class="andre-photo-wrap">
+      <div class="andre-photo-box">
         <img src="andre.jpg" alt="André Silva"
-             style="width:100%;height:100%;object-fit:cover;"
-             onerror="this.parentElement.innerHTML='<span style='font-family:Space Mono,monospace;font-size:2rem;color:var(--accent);'>AS</span>'">
+             onerror="this.style.display='none'">
       </div>
-      <div style="text-align:center;">
-        <div style="font-family:Space Mono,monospace;font-size:0.6rem;color:var(--accent);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.4rem;">Persona Sintética</div>
+      <div class="andre-caption">
+        <div style="font-family:Space Mono,monospace;font-size:0.6rem;color:var(--accent);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.3rem;">Persona Sintética</div>
         <div style="font-family:DM Serif Display,serif;font-size:1.3rem;color:var(--white);font-weight:400;">André Silva</div>
         <div style="font-size:0.75rem;color:var(--text-dim);margin-top:0.2rem;">Assistente de Informações · Token SLP</div>
-        <div style="display:flex;align-items:center;gap:0.4rem;justify-content:center;margin-top:0.6rem;">
-          <div style="width:6px;height:6px;border-radius:50%;background:#4A7C59;animation:blink 2s ease-in-out infinite;"></div>
+        <div class="andre-online">
+          <div class="andre-dot"></div>
           <span style="font-family:Space Mono,monospace;font-size:0.58rem;color:#4A7C59;letter-spacing:0.08em;text-transform:uppercase;">Online</span>
         </div>
       </div>
+    </div>
+    <div>
+      <a href="https://assist1.tokenslp.com.br" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;">Conversar com André →</a>
     </div>
   </div>
 </section>
